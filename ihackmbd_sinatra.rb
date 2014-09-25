@@ -4,7 +4,7 @@ require_relative 'ironhackmdb'
 
 get '/' do
 	@shows = TVShow.all
-	
+
 	erb :index
 end
 
@@ -14,5 +14,6 @@ post '/add' do
 	tv.own_rating = params[:rating]
 	tv.own_comments = params[:comment]
 	tv.save
+	
 	redirect to('/')
 end

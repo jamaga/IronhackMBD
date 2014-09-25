@@ -22,7 +22,6 @@ class TVShow < ActiveRecord::Base
 		else
 			errors.add(:name, 'not allowed')
 	end
-
 end
 
 
